@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pisarze</title>
+</head>
+<body>
+<h1>Wszyscy pisarze</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Epoka</th>
+    </tr>
+    <tr th:each="pisarz : ${pisarze}">
+        <td th:text="${pisarz.id}">123</td>
+        <td th:text="${pisarz.imie}">Bartek</td>
+        <td th:text="${pisarz.nazwisko}">Fiodor</td>
+        <td th:text="${pisarz.epoka}">Sredniowiecze</td>
+    </tr>
+</table>
+</body>
+</html>

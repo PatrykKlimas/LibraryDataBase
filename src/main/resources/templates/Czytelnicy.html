@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Czytelnicy</title>
+</head>
+<body>
+<h1>Wszyscy czytelnicy</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+    </tr>
+    <tr th:each="czytelnik : ${czytelnicy}">
+        <td th:text="${czytelnik.id}">123</td>
+        <td th:text="${czytelnik.imie}">Patryk</td>
+        <td th:text="${czytelnik.nazwisko}">Majtek</td>
+    </tr>
+</table>
+</body>
+</html>
